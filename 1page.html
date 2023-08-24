@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Arthemetic Operations</title>
+
+    <style>
+
+/* CSS */
+.button-54 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
+  cursor: pointer;
+  border: 3px solid;
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-54:active {
+  box-shadow: 0px 0px 0px 0px;
+  top: 5px;
+  left: 5px;
+}
+
+@media (min-width: 768px) {
+  .button-54 {
+    padding: 0.25em 0.75em;
+  }
+}
+    </style>
+</head>
+<body>
+ 
+<div class="container">  
+    <center> <h1 style="font-size: 50px; font-family: cursive; color: brown;"> ARTHEMETIC OPERATIONS </h1> 
+    <table>
+        <tr> 
+            <td colspan="4"> 
+           <h2 style="text-align: center;" > First Value </h2>
+            <input type="text" id="value1"> 
+            <h2 style="text-align: center;" > Second Value </h2>
+            <input type="text" id="value2"> 
+            <h2 style="text-align: center;" > Answer</h2>
+            <input type="text" id="answer"> 
+            </td>
+        </tr>
+        <tr> 
+              <td>
+                <input type="button" class="button-54"  onclick="SumofNumbers()" value="+">
+                
+            </td>
+            <td>
+                <input type="button" class="button-54" onclick="DifferenceofNumbers()" id="subtraction"  value="-">
+                
+            </td> 
+          
+            <td>
+                <input type="button" class="button-54" onclick="RemainderofNumbers()"  id="Remainder" value="%">
+                
+            </td>
+            <td>
+                <input type="button" class="button-54" onclick="ProductofNumbers()" id="multiplication" value="*">
+            </td>
+            <td>
+                <input type="button" class="button-54" onclick="DivisionofNumbers()" id="Division" value="/">
+            </td>
+        </tr>
+    </table>
+    
+    </center> 
+</div>
+<script>
+    function SumofNumbers(){
+        var val1=$('#value1').val();
+        console.log(val1);
+        var val2=$('#value2').val();
+        console.log(val2);
+        var answer= parseInt(val1) + parseInt(val2);
+        $('#answer').val(answer);
+    }
+    function DifferenceofNumbers(){
+        var val1=$('#value1').val();
+        console.log(val1);
+        var val2=$('#value2').val();
+        console.log(val2);
+        var answer= parseInt(val1) - parseInt(val2);
+        $('#answer').val(answer);
+    }
+    function ProductofNumbers(){
+        var val1=$('#value1').val();
+        console.log(val1);
+        var val2=$('#value2').val();
+        console.log(val2);
+        var answer= parseInt(val1) * parseInt(val2);
+        $('#answer').val(answer);
+    }
+    function RemainderofNumbers(){
+        var val1=$('#value1').val();
+        console.log(val1);
+        var val2=$('#value2').val();
+        console.log(val2);
+        var answer= parseInt(val1) % parseInt(val2);
+        $('#answer').val(answer);
+    }
+    function DivisionofNumbers(){
+        var val1=$('#value1').val();
+        console.log(val1);
+        var val2=$('#value2').val();
+        console.log(val2);
+        var answer= parseInt(val1) / parseInt(val2);
+        $('#answer').val(answer);
+    }
+</script>
+</body>
+</html>
